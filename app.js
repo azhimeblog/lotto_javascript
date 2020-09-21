@@ -2,17 +2,15 @@
 //document.getElementById("name").innerHTML = name
 
 let lotto_number = prompt("กรอกเลขที่ต้องการซื้อ:")
+let final_number = Math.floor(Math.random() * 10)
+
 document.getElementById("lotternumber").innerHTML = lotto_number
-    //document.getElementById("result").innerHTML = Math.floor(Math.random() * 100)
-let final_number = document.getElementById("result").innerHTML = Math.floor(Math.random() * 100)
+document.getElementById("result").innerHTML = final_number
 
 
-
-//console.log(32 == "32")
-
-//console.log(lotto_number == final_number)
 if (lotto_number == final_number) {
-    greeting = "คุณถูกรางวัล";
-} else {
-    greeting = "คุณไม่ถูกรางวัล";
+    document.getElementById("final").innerHTML = "คุณถูกรางวัล"
+}
+else {
+    document.getElementById("final").innerHTML = "แย่จังไม่ถูกรางวัล"
 }
