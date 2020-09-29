@@ -16,7 +16,7 @@ for (i = 1; i <= round; i++) {
         alert("คุณแพ้ลองอีกทีนะ")
     }
     document.getElementById("round").innerHTML = "คุณเล่นทั้งหมด  " + round + "   เกม"
-    document.getElementById("ans").innerHTML += " <b>เกมที่ " + i + " </b>เกมนี้ออก  " + random_ans + " <br>"
+    document.getElementById("ans").innerHTML += " <b>เกมที่ " + i + " </b>เกมนี้คุณเลือก  " + ans + " ผลที่ออกคือ "+random_ans+ " <br>"
     document.getElementById("result").innerHTML = "คะแนนที่คุณได้คือ   " + score + "   คะแนน"
 
 }
