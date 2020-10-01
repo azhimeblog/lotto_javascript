@@ -19,5 +19,12 @@ function display(elementid, value) {
 }
 
 
-display("fa", toCelsius(120))
-display("cd", toFaharenheit(120))
+function toCelsiusProgram(value) {
+    document.getElementById("ans").innerHTML = (toCelsius(value))
+
+}
+
+function toFaharenheitProgram() {
+    document.getElementById("ans").innerHTML = (toFaharenheit(150))
+
+}
