@@ -14,10 +14,6 @@ function toFaharenheit(celsius) {
     return "อุณภมิที่คุณระบุเป็นแบบ Faharenheit คือ " + value.toFixed(2) + " ํF"
 }
 
-function display(elementid, value) {
-    document.getElementById(elementid).innerHTML = value
-}
-
 
 function toCelsiusProgram(value) {
     document.getElementById("ans").innerHTML = (toCelsius(value))
