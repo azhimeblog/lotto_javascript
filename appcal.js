@@ -21,10 +21,8 @@ function display(elementid, value) {
 
 function toCelsiusProgram(value) {
     document.getElementById("ans").innerHTML = (toCelsius(value))
-
 }
 
-function toFaharenheitProgram() {
-    document.getElementById("ans").innerHTML = (toFaharenheit(150))
-
+function toFaharenheitProgram(value) {
+    document.getElementById("ans").innerHTML = (toFaharenheit(value))
 }
