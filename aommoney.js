@@ -46,7 +46,7 @@ function typedeposit(types) {
 }
 
 function interest(interestperyear) {
-    interestperyear = document.getElementById("interestperyear").value / 100;
+    interestperyear = document.getElementById("interestperyear").value;
     interestx = parseFloat(interestperyear);
 
     if (interestperyear <= 0) {
@@ -54,14 +54,16 @@ function interest(interestperyear) {
     } else {
         swal("ดอกเบื้ยของคุณคือ  " + interestperyear + " %");
     }
-    return interestx;
+    return interestperyear;
 }
 
 
 
-function sumary(money, yearof, interestperyear) {
+function sumary(money, interestperyear) {
 
-    final = "เงินฝากของคุณคือในปีนี้คือ " + (showdeposit(money) * 12) * 0.12;
+    interesti = (showdeposit(money) * 12) * interest(interestperyear);
+    interestx = parseInt(interesti);
+    final = "เงินดอกเบี้ยของคุณคือในปีนี้คือ " + interesti + "เงินต้นพร้อมดอกเบี้ยรวมเป็น  " + interestx;
 
 
 
