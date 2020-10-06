@@ -10,7 +10,7 @@ function showdeposit(money) {
     } else {
         swal("เงินฝากของคุณคือ", money + "  บาท");
     }
-    return money + " บาท";
+    return money;
 }
 
 function yearsdeposit(yearof) {
@@ -22,7 +22,7 @@ function yearsdeposit(yearof) {
         swal("จำนวนที่คุณเลือกจากฝากคือ ", yearof + "  ปี");
     }
 
-    return yearof + "  ปี";
+    return yearof;
 }
 
 
@@ -50,6 +50,6 @@ function typedeposit(types) {
 
 function sumary(money, yearof) {
 
-    final = "เงินฝากของคุณคือ " + showdeposit(money) + " , จำนวนปีที่ฝากคือ " + yearsdeposit(yearof);
+    final = "เงินฝากของคุณคือ " + showdeposit(money) * yearsdeposit(yearof);
     document.getElementById("sum").innerHTML = final;
 }
