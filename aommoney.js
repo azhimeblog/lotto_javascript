@@ -5,8 +5,8 @@ var days = 365;
 
 function showdeposit(money) {
     money = document.getElementById("youdeposit").value;
-    if (money <= 0) {
-        swal("โปรดใส่เงิน ที่คุณจะเริ่มฝาก");
+    if (money == "โปรดใส่เงินของคุณ") {
+        swal("โปรดใส่เงินที่คุณจะเริ่มฝาก");
     } else {
         swal("เงินฝากของคุณคือ", money + "  บาท");
     }
@@ -14,14 +14,13 @@ function showdeposit(money) {
 }
 
 function yearsdeposit(yearof) {
-    var yearof = document.getElementById("yeardeposit").value;
+    yearof = document.getElementById("yeardeposit").value;
 
     if (yearof <= 0) {
-        swal("โปรดระบุปีของคุณ");
+        swal("โปรดระบุปีของคุณที่ต้องการฝากเงิน");
     } else {
         swal("จำนวนที่คุณเลือกจากฝากคือ ", yearof + "  ปี");
     }
-
     return yearof;
 }
 
@@ -29,7 +28,7 @@ function yearsdeposit(yearof) {
 
 function typedeposit(types) {
 
-    var types = document.getElementById("typedeposit").value;
+    types = document.getElementById("typedeposit").value;
 
     if (types == "รายวัน") {
         swal("คุณเลือกแบบรายวัน");
@@ -42,14 +41,29 @@ function typedeposit(types) {
     } else {
         swal("โปรเลือกประเภทการเก็บเงินของคุณ", "โดยพิมพ์เป็น รายวัน | รายเดือน | รายปี");
     }
-
-
     return types;
 
 }
 
-function sumary(money, yearof) {
+function interest(interestperyear) {
+    interestperyear = document.getElementById("interestperyear").value / 100;
+    interestx = parseFloat(interestperyear);
 
-    final = "เงินฝากของคุณคือ " + showdeposit(money) * yearsdeposit(yearof);
+    if (interestperyear <= 0) {
+        swal("ใส่จำนวนดอกเบี้ยที่คิดว่าจะได้ ต่อปี");
+    } else {
+        swal("ดอกเบื้ยของคุณคือ  " + interestperyear + " %");
+    }
+    return interestx;
+}
+
+
+
+function sumary(money, yearof, interestperyear) {
+
+    final = "เงินฝากของคุณคือในปีนี้คือ " + (showdeposit(money) * 12) * 0.12;
+
+
+
     document.getElementById("sum").innerHTML = final;
 }

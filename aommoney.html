@@ -29,11 +29,12 @@
 
         <label for="yeardeposit"> อยากจะฝากกี่ปี : </label>
         <input id="yeardeposit" type="number" value="" /> <button onclick="yearsdeposit()"> ยืนยันปีที่จะฝาก</button> <br>
-        <label for="yeardok"> ดอกเบี้ยที่จะได้ : </label>
-        <input id="yeardok" type="number" />
+        <label for="interestperyear"> ดอกเบี้ยที่จะได้ : </label>
+        <input id="interestperyear" type="number" value="" />
 
-        <button onclick="sumary()">คลิ้กเพื่อคำนวน</button>
+        <button onclick="interest()">คลิ้กเพื่อยืนยันดอกเบี้ย</button>
 
+        <br><button onclick="sumary()">คลิ้กเพื่อยืนยันดอกเบี้ย</button>
 
         <div>
             <p id="sum"></p>
